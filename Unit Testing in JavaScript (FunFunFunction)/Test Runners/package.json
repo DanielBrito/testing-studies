@@ -1,0 +1,15 @@
+{
+  "name": "test-runners",
+  "version": "1.0.0",
+  "description": "Test runners",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch *.js"
+  },
+  "author": "Daniel Brito",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.2.2"
+  }
+}
