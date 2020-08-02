@@ -1,0 +1,15 @@
+{
+  "name": "mocha-test",
+  "version": "1.0.0",
+  "description": "Simple app for testing",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha || exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.0"
+  }
+}
