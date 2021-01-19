@@ -2,6 +2,12 @@
 
 I've decided that is extremely important for me to learn more about this topic, so I'll be exploring some tools and techniques to help me in this journey.
 
+These examples cover different aspects of several development tools and concepts. So, I've decided to maintain this repository in order to use it as a personal studying resource.
+
+---
+
+## Unit Tests
+
 According to [Wikipedia](https://en.wikipedia.org/wiki/Unit_testing):
 
 _**Unit tests** are typically automated tests written and run by software developers to ensure that a section of an application (known as the "unit") meets its design and behaves as intended. In procedural programming, a unit could be an entire module, but it is more commonly an individual function or procedure. In object-oriented programming, a unit is often an entire interface, such as a class, but could be an individual method. By writing tests first for the smallest testable units, then the compound behaviors between those, one can build up comprehensive tests for complex applications._
