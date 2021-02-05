@@ -1,12 +1,19 @@
-# Learning how to build Unit Tests
+# :100: Learning how to build Unit Tests
 
-I've decided that is extremely important for me to learn more about this topic, so I'll be exploring some tools and techniques to help me in this journey.
+I found out that is extremely important for me to learn more about unit testing, so I'll be exploring some tools and techniques to help me in this journey. These examples cover different aspects of several development tools and concepts.
 
-These examples cover different aspects of several development tools and concepts. So, I've decided to maintain this repository in order to use it as a personal studying resource.
+## :bookmark_tabs: Learning Topics
 
----
+- Types of tests:
+  - Unit tests
+  - Integration tests
+  - e2e tests
+- Jest
+- Mocha
+- Chai
+- Puppeteer
 
-## Unit Tests
+## :mag: Unit Tests
 
 According to [Wikipedia](https://en.wikipedia.org/wiki/Unit_testing):
 
