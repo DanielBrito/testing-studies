@@ -4,10 +4,10 @@ I found out that is extremely important for me to learn more about unit testing,
 
 ## :bookmark_tabs: Learning Topics
 
-- Types of Tests:
-  - Unit Tests
-  - Integration Tests
-  - E2E Tests
+- Unit Tests
+- Integration Tests
+- E2E Tests
+- Testing Library
 - Jest
 - Mocha
 - Chai
