@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import styles from "./Tabs.module.css";
+import PropTypes from "prop-types";
 
 import { slugify } from "../../utils/slugify";
 
 const Tabs = ({ children, initialTab }) => {
-  const [activeTab, setActiveTab] = useState(children[0].props.label);
+  const [activeTab, setActiveTab] = useState(slugify(children[0].props.label));
   const router = useRouter();
 
   const handleClick = (e, newActiveTab) => {
@@ -16,7 +17,6 @@ const Tabs = ({ children, initialTab }) => {
   useEffect(() => {
     if (initialTab.tab) {
       setActiveTab(initialTab.tab);
-      console.log(initialTab);
     }
   }, []);
 
@@ -24,7 +24,6 @@ const Tabs = ({ children, initialTab }) => {
     router.push(`${router.pathname}?tab=${slugify(activeTab)}`, undefined, {
       shallow: true,
     });
-    console.log(activeTab);
   }, [activeTab]);
 
   return (
@@ -34,8 +33,10 @@ const Tabs = ({ children, initialTab }) => {
           const label = tab.props.label;
           return (
             <li
+              data-testid={slugify(label)}
               className={slugify(label) === activeTab ? styles.current : ""}
               key={label}
+              id={slugify(label)}
             >
               <a href="#" onClick={(e) => handleClick(e, label)}>
                 {label}
@@ -47,13 +48,31 @@ const Tabs = ({ children, initialTab }) => {
       {children.map((one) => {
         if (slugify(one.props.label) === activeTab)
           return (
-            <div key={one.props.label} className={styles.content}>
+            <div
+              data-testid="content"
+              key={one.props.label}
+              className={styles.content}
+            >
               {one.props.children}
             </div>
           );
       })}
     </div>
   );
+};
+
+Tabs.propTypes = {
+  initialTab: PropTypes.object,
+  children: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      children: PropTypes.any,
+    })
+  ).isRequired,
+};
+
+Tabs.defaultProps = {
+  initialTab: {},
 };
 
 export { Tabs };

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> matches snapshot 1`] = `
+<div>
+  <div>
+    <ul
+      class="tabs"
+    >
+      <li
+        class=""
+        data-testid="tab-1"
+        id="tab-1"
+      >
+        <a
+          href="#"
+        >
+          Tab 1
+        </a>
+      </li>
+      <li
+        class=""
+        data-testid="tab-2"
+        id="tab-2"
+      >
+        <a
+          href="#"
+        >
+          Tab 2
+        </a>
+      </li>
+      <li
+        class="current"
+        data-testid="tab-3"
+        id="tab-3"
+      >
+        <a
+          href="#"
+        >
+          Tab 3
+        </a>
+      </li>
+    </ul>
+    <div
+      class="content"
+      data-testid="content"
+    >
+      Components
+    </div>
+  </div>
+</div>
+`;
