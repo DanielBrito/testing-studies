@@ -7,8 +7,12 @@ These examples cover different tools and concepts related to testing from my [se
 - Unit Tests
 - Integration Tests
 - E2E Tests
+
+## :toolbox: Tools
+
 - Testing Library
 - Jest
 - Mocha
 - Chai
 - Puppeteer
+
