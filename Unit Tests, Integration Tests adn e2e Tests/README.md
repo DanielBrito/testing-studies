@@ -1,10 +1,6 @@
-# Available at
+# Unit Tests, Integration Tests and e2e Tests
 
-[Testing Introduction Tutorial - Unit Tests, Integration Tests adn e2e Tests (Academind)](https://www.youtube.com/watch?v=r9HdJ8P6GQI)
-
-## ✏️ Notes
-
-### Why Test?
+## Why Test?
 
 - Get an error if you break code
 - Save time
@@ -13,7 +9,7 @@
 - Break up complex dependencies
 - Improve your code
 
-### Different kinds of tests
+## Different kinds of tests
 
 **Top down**: Incresing complexity & **Bottom up**: Increasing frequency
 
@@ -21,10 +17,11 @@
 - With dependencies (e.g. testing a function that calls a function): Integration Tests
 - Full flow (e.g. validating the DOM after a click): End-to-End (E2E) Tests
 
-### Testing Setup
+## Testing Setup
 
 - Test Runner: Execute your tests and summarize results (e.g. Mocha)
 - Assertion Library: Define testing logic conditions (e.g. Chai)
 - Headless Browser: Most used for e2e testing that simulates browser interaction (e.g. Puppeteer)
 
 **Jest** can be used as a test runner and assertion library.
+
