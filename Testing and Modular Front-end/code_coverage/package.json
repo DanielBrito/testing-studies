@@ -1,0 +1,10 @@
+{
+  "name": "code_coverage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "coverify": "^1.5.1",
+    "tape": "^5.4.0"
+  }
+}

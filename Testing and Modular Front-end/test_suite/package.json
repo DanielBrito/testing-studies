@@ -1,0 +1,9 @@
+{
+  "name": "test_suite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "tape": "^5.4.0"
+  }
+}
