@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "hyperx": "^2.5.4",
+    "virtual-dom": "^2.1.1"
+  }
+}
