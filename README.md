@@ -13,7 +13,9 @@ These experiments cover different tools and concepts related to testing from my 
 
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Jest](https://jestjs.io/)
+- [Cypress](https://www.cypress.io/)
 - [Mocha](https://mochajs.org/)
 - [Chai](https://www.chaijs.com/)
 - [Puppeteer](https://github.com/puppeteer/puppeteer)
 - [Tape](https://github.com/substack/tape)
+
