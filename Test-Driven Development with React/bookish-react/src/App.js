@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Typography } from "@material-ui/core";
+import axios from "axios";
+
 import BookList from "./BookList";
 
-function App() {
-  const books = [{ name: "Refactoring" }, { name: "Domain-driven design" }];
+const App = () => {
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    const fetchBooks = async () => {
+      const res = await axios.get("http://localhost:8080/books");
+      setBooks(res.data);
+    };
+
+    fetchBooks();
+  }, []);
 
   return (
     <div className="App">
@@ -14,6 +25,6 @@ function App() {
       <BookList books={books} />
     </div>
   );
-}
+};
 
 export default App;

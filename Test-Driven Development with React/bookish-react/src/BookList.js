@@ -4,7 +4,7 @@ const BookList = ({ books }) => {
   return (
     <div data-test="book-list">
       {books.map((book) => (
-        <div className="book-item">
+        <div key={book.id} className="book-item">
           <h2 className="title">{book.name}</h2>
         </div>
       ))}
