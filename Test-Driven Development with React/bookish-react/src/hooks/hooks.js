@@ -13,7 +13,9 @@ export const useRemoteService = (initial) => {
 
       try {
         const res = await axios.get("http://localhost:8080/books");
-        setData(res.data);
+        const sorted = res.data.sort((a, b) => a.id - b.id);
+
+        setData(sorted);
       } catch (error) {
         setError(true);
       } finally {

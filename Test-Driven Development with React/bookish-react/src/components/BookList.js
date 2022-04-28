@@ -14,6 +14,7 @@ const BookList = ({ books, loading, error }) => {
       {books.map((book) => (
         <div key={book.id} className="book-item">
           <h2 className="title">{book.name}</h2>
+          <a href={`/books/${book.id}`}>View Details</a>
         </div>
       ))}
     </div>

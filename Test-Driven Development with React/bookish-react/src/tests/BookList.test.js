@@ -12,7 +12,7 @@ describe("BookList", () => {
 
     render(<BookList {...props} />);
 
-    expect(screen.getByText(/Loading/)).toBeInTheDocument();
+    expect(screen.getByText(/Loading/i)).toBeInTheDocument();
   });
 
   it("error", () => {
@@ -22,7 +22,7 @@ describe("BookList", () => {
 
     render(<BookList {...props} />);
 
-    expect(screen.getByText(/Error/)).toBeInTheDocument();
+    expect(screen.getByText(/Error/i)).toBeInTheDocument();
   });
 
   it("render books", () => {
