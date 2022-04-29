@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import BookList from "../components/BookList";
+import BookList from "./BookList";
 
 describe("BookList", () => {
   it("loading", () => {
@@ -41,8 +41,14 @@ describe("BookList", () => {
 
     render(<BookList {...props} />);
 
+    // const titles = screen
+    //   .getAllByRole("heading", { level: 2 })
+    //   .map((item) => item.innerHTML);
+
+    // OR
+
     const titles = screen
-      .getAllByRole("heading", { level: 2 })
+      .getAllByTestId("book-title")
       .map((item) => item.innerHTML);
 
     expect(titles).toEqual(["Refactoring", "Domain-driven design"]);

@@ -13,7 +13,9 @@ const BookList = ({ books, loading, error }) => {
     <div data-test="book-list">
       {books.map((book) => (
         <div key={book.id} className="book-item">
-          <h2 className="title">{book.name}</h2>
+          <h2 className="book-title" data-testid="book-title">
+            {book.name}
+          </h2>
           <a href={`/books/${book.id}`}>View Details</a>
         </div>
       ))}

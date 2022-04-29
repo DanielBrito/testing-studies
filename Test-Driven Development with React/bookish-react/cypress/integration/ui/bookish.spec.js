@@ -1,6 +1,7 @@
 const axios = require("axios");
 
 describe("Bookish application", function () {
+  /*
   before(() => {
     return axios
       .delete("http://localhost:8080/books?_cleanup=true")
@@ -35,6 +36,7 @@ describe("Bookish application", function () {
       });
     });
   });
+  */
 
   it("Visits the Bookish", function () {
     cy.visit("http://localhost:3000/");
@@ -45,7 +47,7 @@ describe("Bookish application", function () {
     cy.visit("http://localhost:3000/");
     cy.get('div[data-test="book-list"]').should("exist");
     cy.get("div.book-item").should((books) => {
-      expect(books).to.have.length(3);
+      expect(books).to.have.length(4);
 
       const titles = [...books].map((x) => x.querySelector("h2").innerHTML);
 
@@ -53,6 +55,7 @@ describe("Bookish application", function () {
         "Domain-driven design",
         "Refactoring",
         "Building microservices",
+        "Acceptance TDD with React",
       ]);
     });
   });

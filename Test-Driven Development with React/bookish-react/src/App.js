@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import BookListContainer from "./components/BookListContainer";
-import BookDetailContainer from "./components/BookDetailContainer";
+import BookListContainer from "./BookList/BookListContainer";
+import BookDetailContainer from "./BookDetail/BookDetailContainer";
 
 const App = () => {
   return (
