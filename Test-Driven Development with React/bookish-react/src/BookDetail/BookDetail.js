@@ -1,5 +1,9 @@
 import React from "react";
 
+const getDescriptionFor = (book) => {
+  return book.description ? book.description : book.name;
+};
+
 const BookDetail = ({ book }) => {
   return (
     <div className="detail">
@@ -7,7 +11,7 @@ const BookDetail = ({ book }) => {
         {book.name}
       </h2>
       <p className="book-description" data-testid="book-description">
-        {book.description}
+        {getDescriptionFor(book)}
       </p>
     </div>
   );

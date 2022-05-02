@@ -2,7 +2,7 @@ const jsonServer = require("json-server");
 const url = require("url");
 
 const server = jsonServer.create();
-const router = jsonServer.router("db.json");
+const router = jsonServer.router("books.json");
 const middlewares = jsonServer.defaults();
 
 const _ = require("lodash");

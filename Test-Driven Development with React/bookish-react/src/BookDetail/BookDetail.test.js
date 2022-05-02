@@ -33,4 +33,17 @@ describe("BookDetail", () => {
     const title = screen.getByTestId("book-description");
     expect(title.innerHTML).toEqual(props.book.description);
   });
+
+  it("displays the book name when no description is given", () => {
+    const props = {
+      book: {
+        name: "Refactoring",
+      },
+    };
+
+    render(<BookDetail {...props} />);
+
+    const description = screen.getByTestId("book-description");
+    expect(description.innerHTML).toEqual(props.book.name);
+  });
 });
