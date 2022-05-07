@@ -9,6 +9,11 @@ These experiments cover different tools and concepts related to testing from my 
 - Integration Tests
 - E2E Tests
 
+## 📑 Resources
+
+- [Testing Strategies in a Microservice Architecture](https://martinfowler.com/articles/microservice-testing/) (Toby Clemson)
+- [The Practical Test Pyramid](https://martinfowler.com/articles/microservice-testing/) (Ham Vocke)
+
 ## :toolbox: Tools
 
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
