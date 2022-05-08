@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const cleanUpStubBooks = () => {
   return axios
-    .delete("http://localhost:8000/books?_cleanup=true")
+    .delete("http://localhost:8080/books?_cleanup=true")
     .catch((err) => err);
 };
 
@@ -29,7 +29,7 @@ export const feedStubBooks = () => {
   });
 };
 
-export const gotoApp = () => {
+export const goToApp = () => {
   cy.visit("http://localhost:3000/");
 };
 
@@ -50,6 +50,7 @@ export const checkBookListWith = (expectation = []) => {
 
 export const gotoNthBookInTheList = (nth) => {
   cy.get("div.book-item").contains("View Details").eq(nth).click();
+
   cy.url().should("include", `/books/${nth + 1}`);
 };
 
