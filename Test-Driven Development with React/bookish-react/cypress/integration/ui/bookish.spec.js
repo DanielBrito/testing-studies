@@ -1,7 +1,23 @@
 const axios = require("axios");
 
+import {
+  checkAppTitle,
+  checkBookDetail,
+  checkBookListWith,
+  cleanUpStubBooks,
+  feedStubBooks,
+  gotoApp,
+  gotoNthBookInTheList,
+  performSearch,
+} from "../../helpers";
+
+const BOOK_NAMES = [
+  "Domain-driven design",
+  "Refactoring",
+  "Building microservices",
+];
+
 describe("Bookish application", function () {
-  /*
   before(() => {
     return axios
       .delete("http://localhost:8080/books?_cleanup=true")
@@ -36,34 +52,27 @@ describe("Bookish application", function () {
       });
     });
   });
-  */
 
   it("Visits the Bookish", function () {
-    cy.visit("http://localhost:3000/");
-    cy.get('h2[data-test="heading"]').contains("Bookish");
+    gotoApp();
+    checkAppTitle();
   });
 
   it("Shows a book list", () => {
-    cy.visit("http://localhost:3000/");
-    cy.get('div[data-test="book-list"]').should("exist");
-    cy.get("div.book-item").should((books) => {
-      expect(books).to.have.length(4);
-
-      const titles = [...books].map((x) => x.querySelector("h2").innerHTML);
-
-      expect(titles).to.have.members([
-        "Domain-driven design",
-        "Refactoring",
-        "Building microservices",
-        "Acceptance TDD with React",
-      ]);
-    });
+    gotoApp();
+    checkBookListWith(BOOK_NAMES);
   });
 
   it("Goes to the detail page", () => {
-    cy.visit("http://localhost:3000/");
-    cy.get("div.book-item").contains("View Details").eq(0).click();
-    cy.url().should("include", "/books/1");
-    cy.get("h2.book-title").contains("Refactoring");
+    gotoApp();
+    gotoNthBookInTheList(0);
+    checkBookDetail();
+  });
+
+  it("Searches for a title", () => {
+    gotoApp();
+    checkBookListWith(BOOK_NAMES);
+    performSearch("design");
+    checkBookListWith(["Domain-driven design"]);
   });
 });
