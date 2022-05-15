@@ -7,6 +7,8 @@ const middlewares = jsonServer.defaults();
 
 const _ = require("lodash");
 
+const PORT = 8080;
+
 router.render = function (req, res) {
   var data = res.locals.data;
 
@@ -87,6 +89,6 @@ server.use(jsonServer.rewriter(buildRewrite(relations)));
 
 server.use(router);
 
-server.listen(8080, () => {
-  console.log("JSON Server is running");
+server.listen(PORT, () => {
+  console.log(`JSON Server is running on port ${PORT}`);
 });

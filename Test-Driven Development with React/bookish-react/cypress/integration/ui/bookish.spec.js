@@ -2,7 +2,9 @@ import {
   checkAppTitle,
   checkBookDetail,
   checkBookListWith,
+  checkReview,
   cleanUpStubBooks,
+  composeReview,
   feedStubBooks,
   goToApp,
   gotoNthBookInTheList,
@@ -47,4 +49,11 @@ describe("Bookish application", function () {
     performSearch("design");
     checkBookListWith(["Domain-driven design"]);
   });
+
+  // it("Write a review for a book", () => {
+  //   gotoNthBookInTheList(0);
+  //   checkBookDetail();
+  //   composeReview("Juntao Qiu", "Excellent works!");
+  //   checkReview();
+  // });
 });
