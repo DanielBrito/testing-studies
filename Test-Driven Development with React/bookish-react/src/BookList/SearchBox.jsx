@@ -1,25 +1,26 @@
-import TextField from "@material-ui/core/TextField/TextField";
 import React from "react";
+import TextField from "@material-ui/core/TextField/TextField";
+import { clone, isEmpty } from "lodash";
 
-import {clone, isEmpty} from 'lodash';
-
-const SearchBox = ({term, onSearch}) => {
+const SearchBox = ({ term, onSearch }) => {
   const protect = (event) => {
     const value = clone(event.target.value);
-    if(!isEmpty(value.trim())) {
-      return onSearch(event)
+    if (!isEmpty(value.trim())) {
+      return onSearch(event);
     }
-  }
+  };
 
-  return (<TextField
-    fullWidth
-    label="Search"
-    value={term}
-    data-test="search"
-    onChange={protect}
-    margin="normal"
-    variant="outlined"
-  />)
+  return (
+    <TextField
+      fullWidth
+      label="Search"
+      value={term}
+      data-test="search"
+      onChange={protect}
+      margin="normal"
+      variant="outlined"
+    />
+  );
 };
 
 export default SearchBox;

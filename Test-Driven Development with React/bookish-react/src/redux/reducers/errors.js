@@ -7,6 +7,6 @@ export default (state = {}, action) => {
   const [, name, status] = matches;
   return {
     ...state,
-    [name]: status === 'FAILED' ? payload.message : ''
-  }
-}
+    [name]: status === "FAILED" ? payload.message : "",
+  };
+};

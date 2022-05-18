@@ -1,12 +1,13 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
-import Review from "./Review";
+import { Provider } from "react-redux";
 import userEvent from "@testing-library/user-event";
+import "@testing-library/jest-dom/extend-expect";
+
+import Review from "./Review";
 
 import * as actions from "../redux/actions/actions";
 import store from "../store";
-import { Provider } from "react-redux";
 
 const renderWithProvider = (component) => {
   return { ...render(<Provider store={store}>{component}</Provider>) };
@@ -23,6 +24,7 @@ describe("Review", () => {
     };
 
     const { container } = renderWithProvider(<Review {...props} />);
+
     const review = container.querySelector(".review");
 
     expect(review.querySelector(".name").innerHTML).toEqual("Juntao");
@@ -42,6 +44,7 @@ describe("Review", () => {
     };
 
     const { getByText } = renderWithProvider(<Review {...props} />);
+
     const button = getByText("Edit");
 
     expect(button.innerHTML).toEqual("Edit");
@@ -61,7 +64,9 @@ describe("Review", () => {
     };
 
     const { getByText, container } = renderWithProvider(<Review {...props} />);
+
     const button = getByText("Edit");
+
     const content = container.querySelector("p.content");
 
     expect(content).toBeInTheDocument();
@@ -106,6 +111,7 @@ describe("Review", () => {
     userEvent.click(getByText("Edit"));
 
     const content = container.querySelector('textarea[name="content"]');
+
     userEvent.type(content, "Fantastic work");
 
     userEvent.click(getByText("Submit"));

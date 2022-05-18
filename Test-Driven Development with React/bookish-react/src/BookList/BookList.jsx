@@ -9,9 +9,14 @@ import Button from "@material-ui/core/Button/Button";
 import Grid from "@material-ui/core/Grid/Grid";
 import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
   },
   name: {
     maxHeight: 30,
@@ -19,9 +24,10 @@ const useStyles = makeStyles(() => ({
     textOverflow: "ellipsis",
   },
   description: {
-    maxHeight: 40,
+    display: "box",
+    lineClamp: 2,
+    boxOrient: "vertical",
     overflow: "hidden",
-    textOverflow: "ellipsis",
   },
 }));
 
@@ -49,6 +55,7 @@ const BookList = ({ loading, error, books }) => {
                     variant="h5"
                     component="h2"
                     className={classes.name}
+                    data-testid="book-title"
                   >
                     {book.name}
                   </Typography>
@@ -57,6 +64,7 @@ const BookList = ({ loading, error, books }) => {
                     color="textSecondary"
                     component="p"
                     className={classes.description}
+                    data-testid="book-description"
                   >
                     {book.description}
                   </Typography>

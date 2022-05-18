@@ -1,9 +1,10 @@
-import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import {Route, Switch} from 'react-router-dom';
+import React from "react";
+import Typography from "@material-ui/core/Typography";
+import { Route, Switch } from "react-router-dom";
+import Container from "@material-ui/core/Container/Container";
+
 import BookListContainer from "./BookList/BookListContainer";
 import BookDetailContainer from "./BookDetail/BookDetailsContainer";
-import Container from "@material-ui/core/Container/Container";
 
 const App = () => {
   return (
@@ -12,11 +13,11 @@ const App = () => {
         Bookish
       </Typography>
       <Switch>
-        <Route exact path="/" component={BookListContainer}/>
-        <Route path="/books/:id" component={BookDetailContainer}/>
+        <Route exact path="/" component={BookListContainer} />
+        <Route path="/books/:id" component={BookDetailContainer} />
       </Switch>
     </Container>
   );
-}
+};
 
 export default App;
