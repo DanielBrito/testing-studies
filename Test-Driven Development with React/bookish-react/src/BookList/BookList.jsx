@@ -42,10 +42,12 @@ const BookList = ({ loading, error, books }) => {
     return <p>Error...</p>;
   }
 
+  const sortedBooks = books.sort((a, b) => a.id - b.id);
+
   return (
     <div data-test="book-list" className={classes.root}>
       <Grid container spacing={3}>
-        {books.map((book) => (
+        {sortedBooks.map((book) => (
           <Grid item key={book.id} className="book-item">
             <Card>
               <CardActionArea>

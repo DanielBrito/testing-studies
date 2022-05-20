@@ -12,8 +12,8 @@ import {
 } from "../../helpers";
 
 const BOOK_NAMES = [
-  "Domain-driven design",
   "Refactoring",
+  "Domain-driven design",
   "Building microservices",
 ];
 
@@ -50,10 +50,10 @@ describe("Bookish application", function () {
     checkBookListWith(["Domain-driven design"]);
   });
 
-  // it("Write a review for a book", () => {
-  //   gotoNthBookInTheList(0);
-  //   checkBookDetail();
-  //   composeReview("Juntao Qiu", "Excellent works!");
-  //   checkReview();
-  // });
+  it("Write a review for a book", () => {
+    gotoNthBookInTheList(0);
+    checkBookDetail();
+    composeReview("Juntao Qiu", "Excellent works!");
+    checkReview();
+  });
 });
