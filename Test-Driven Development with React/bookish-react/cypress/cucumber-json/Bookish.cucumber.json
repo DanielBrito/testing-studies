@@ -23,7 +23,7 @@
             "name": "I am a bookish user",
             "result": {
               "status": "passed",
-              "duration": 50000000
+              "duration": 212000000
             }
           },
           {
@@ -33,7 +33,7 @@
             "name": "I open the list page",
             "result": {
               "status": "passed",
-              "duration": 356000000
+              "duration": 2545000000
             }
           },
           {
@@ -43,7 +43,7 @@
             "name": "I can see the title \"Bookish\" is showing",
             "result": {
               "status": "passed",
-              "duration": 19000000
+              "duration": 98000000
             }
           }
         ]
@@ -63,7 +63,7 @@
             "name": "I am a bookish user",
             "result": {
               "status": "passed",
-              "duration": 107000000
+              "duration": 152000000
             }
           },
           {
@@ -73,7 +73,7 @@
             "name": "I open the list page",
             "result": {
               "status": "passed",
-              "duration": 287000000
+              "duration": 1139000000
             }
           },
           {
@@ -108,7 +108,7 @@
             "name": "there is a book list",
             "result": {
               "status": "passed",
-              "duration": 173000000
+              "duration": 443000000
             }
           }
         ]
@@ -128,7 +128,7 @@
             "name": "I am a bookish user",
             "result": {
               "status": "passed",
-              "duration": 33000000
+              "duration": 137000000
             }
           },
           {
@@ -138,7 +138,7 @@
             "name": "I open the book detail page for the first item",
             "result": {
               "status": "passed",
-              "duration": 198000000
+              "duration": 215000000
             }
           },
           {
@@ -165,7 +165,7 @@
             "name": "I add a review to that book",
             "result": {
               "status": "passed",
-              "duration": 1401000000
+              "duration": 1107000000
             }
           },
           {
@@ -175,7 +175,7 @@
             "name": "I can see it shows beneath the description section goes \"Excellent works!\"",
             "result": {
               "status": "passed",
-              "duration": 83000000
+              "duration": 125000000
             }
           }
         ]
@@ -195,7 +195,7 @@
             "name": "I am a bookish user",
             "result": {
               "status": "passed",
-              "duration": 37000000
+              "duration": 125000000
             }
           },
           {
@@ -205,7 +205,7 @@
             "name": "I open the list page",
             "result": {
               "status": "passed",
-              "duration": 416000000
+              "duration": 271000000
             }
           },
           {
@@ -215,7 +215,7 @@
             "name": "I typed \"design\" to perform a search",
             "result": {
               "status": "passed",
-              "duration": 790000000
+              "duration": 504000000
             }
           },
           {
@@ -225,7 +225,7 @@
             "name": "I should see \"Domain-driven design\" is matched",
             "result": {
               "status": "passed",
-              "duration": 31000000
+              "duration": 29000000
             }
           }
         ]

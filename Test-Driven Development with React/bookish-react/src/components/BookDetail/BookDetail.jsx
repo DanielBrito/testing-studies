@@ -1,9 +1,9 @@
 import React from "react";
 
-import ReviewList from "./ReviewList";
-import ReviewForm from "./ReviewForm";
+import { ReviewList } from "../ReviewList";
+import { ReviewForm } from "../ReviewForm";
 
-const BookDetail = ({ book }) => {
+export const BookDetail = ({ book }) => {
   return (
     <div className="detail">
       <h2 className="book-title" data-testid="book-title">
@@ -19,5 +19,3 @@ const BookDetail = ({ book }) => {
     </div>
   );
 };
-
-export default BookDetail;

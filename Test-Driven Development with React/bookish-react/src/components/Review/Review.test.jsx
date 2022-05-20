@@ -4,10 +4,10 @@ import { Provider } from "react-redux";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom/extend-expect";
 
-import Review from "./Review";
+import { Review } from "./Review";
 
-import * as actions from "../redux/actions/actions";
-import store from "../store";
+import * as actions from "../../redux/actions/actions";
+import store from "../../store";
 
 const renderWithProvider = (component) => {
   return { ...render(<Provider store={store}>{component}</Provider>) };

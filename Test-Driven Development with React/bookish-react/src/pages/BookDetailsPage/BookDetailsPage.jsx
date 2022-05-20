@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import BookDetail from "./BookDetail";
+import { BookDetail } from "../../components/BookDetail";
 
-import * as actions from "../redux/actions/actions";
+import * as actions from "../../redux/actions";
 
-const BookDetailContainer = ({ match }) => {
+export const BookDetailsPage = ({ match }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,5 +16,3 @@ const BookDetailContainer = ({ match }) => {
 
   return <BookDetail book={book} />;
 };
-
-export default BookDetailContainer;

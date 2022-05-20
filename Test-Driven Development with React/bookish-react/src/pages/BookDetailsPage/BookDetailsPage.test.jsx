@@ -6,9 +6,9 @@ import MockAdapter from "axios-mock-adapter";
 import { MemoryRouter as Router } from "react-router-dom";
 import "@testing-library/jest-dom/extend-expect";
 
-import BookDetailsContainer from "./BookDetailsContainer";
+import { BookDetailsPage } from "./BookDetailsPage";
 
-import store from "../store";
+import store from "../../store";
 
 const renderWithProvider = (component) => {
   return {
@@ -37,9 +37,7 @@ describe("BookDetailsContainer", () => {
       id: 2,
     });
 
-    const { findByText } = renderWithProvider(
-      <BookDetailsContainer {...props} />
-    );
+    const { findByText } = renderWithProvider(<BookDetailsPage {...props} />);
 
     const book = await findByText(
       "Acceptance tests driven development with React"

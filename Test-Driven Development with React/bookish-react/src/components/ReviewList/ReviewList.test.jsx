@@ -4,9 +4,9 @@ import { Provider } from "react-redux";
 
 import "@testing-library/jest-dom/extend-expect";
 
-import ReviewList from "./ReviewList";
+import { ReviewList } from "./ReviewList";
 
-import store from "../store";
+import store from "../../store";
 
 const renderWithProvider = (component) => {
   return { ...render(<Provider store={store}>{component}</Provider>) };

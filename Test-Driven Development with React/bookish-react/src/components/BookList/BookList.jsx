@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BookList = ({ loading, error, books }) => {
+export const BookList = ({ loading, error, books }) => {
   const classes = useStyles();
 
   if (loading) {
@@ -84,5 +84,3 @@ const BookList = ({ loading, error, books }) => {
     </div>
   );
 };
-
-export default BookList;

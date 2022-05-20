@@ -1,8 +1,8 @@
 import React from "react";
 
-import Review from "./Review";
+import { Review } from "../Review";
 
-const ReviewList = ({ reviews = [] }) => {
+export const ReviewList = ({ reviews = [] }) => {
   return (
     <div data-test="reviews-container">
       {reviews.map((review, index) => (
@@ -11,5 +11,3 @@ const ReviewList = ({ reviews = [] }) => {
     </div>
   );
 };
-
-export default ReviewList;

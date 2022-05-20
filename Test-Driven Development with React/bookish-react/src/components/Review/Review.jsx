@@ -9,9 +9,9 @@ import ExpansionPanel from "@material-ui/core/ExpansionPanel/ExpansionPanel";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Grid from "@material-ui/core/Grid/Grid";
 
-import * as actions from "../redux/actions/actions";
+import * as actions from "../../redux/actions";
 
-const Review = ({ review }) => {
+export const Review = ({ review }) => {
   const [editing, setEditing] = useState(false);
   const [content, setContent] = useState(review.content);
 
@@ -71,5 +71,3 @@ const Review = ({ review }) => {
     </div>
   );
 };
-
-export default Review;

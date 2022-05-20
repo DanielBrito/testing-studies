@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import Grid from "@material-ui/core/Grid/Grid";
 import { createSelector } from "reselect";
 
-import BookList from "./BookList";
-import SearchBox from "./SearchBox";
+import { BookList } from "../../components/BookList";
+import { SearchBox } from "../../components/SearchBox";
 
-import * as actions from "../redux/actions/actions";
+import * as actions from "../../redux/actions/actions";
 
 const bookListSelector = createSelector(
   [
@@ -17,7 +17,7 @@ const bookListSelector = createSelector(
   (books, loading, error) => ({ books, loading, error })
 );
 
-const BookListContainer = () => {
+export const BookListPage = () => {
   const [term, setTerm] = useState("");
 
   const dispatch = useDispatch();
@@ -43,5 +43,3 @@ const BookListContainer = () => {
     </Fragment>
   );
 };
-
-export default BookListContainer;

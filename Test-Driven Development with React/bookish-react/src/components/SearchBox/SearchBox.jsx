@@ -2,7 +2,7 @@ import React from "react";
 import TextField from "@material-ui/core/TextField/TextField";
 import { clone, isEmpty } from "lodash";
 
-const SearchBox = ({ term, onSearch }) => {
+export const SearchBox = ({ term, onSearch }) => {
   const protect = (event) => {
     const value = clone(event.target.value);
     if (!isEmpty(value.trim())) {
@@ -22,5 +22,3 @@ const SearchBox = ({ term, onSearch }) => {
     />
   );
 };
-
-export default SearchBox;

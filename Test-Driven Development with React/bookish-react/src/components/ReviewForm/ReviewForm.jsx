@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import Grid from "@material-ui/core/Grid/Grid";
 import { makeStyles } from "@material-ui/core";
 
-import * as actions from "../redux/actions/actions";
+import * as actions from "../../redux/actions";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const ReviewForm = ({ bookId }) => {
+export const ReviewForm = ({ bookId }) => {
   const classes = useStyles();
   const [name, setName] = useState("");
   const [content, setContent] = useState("");
@@ -67,5 +67,3 @@ const ReviewForm = ({ bookId }) => {
     </form>
   );
 };
-
-export default ReviewForm;

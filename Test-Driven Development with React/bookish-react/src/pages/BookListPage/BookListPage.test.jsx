@@ -6,9 +6,9 @@ import { Provider } from "react-redux";
 import { MemoryRouter as Router } from "react-router-dom";
 import "@testing-library/jest-dom/extend-expect";
 
-import BookListContainer from "./BookListContainer";
+import { BookListPage } from "./BookListPage";
 
-import store from "../store";
+import store from "../../store";
 
 const renderWithProvider = (component) => {
   return {
@@ -29,7 +29,7 @@ describe("BookListContainer", () => {
       { name: "Acceptance tests driven development with React", id: 2 },
     ]);
 
-    const { findByText } = renderWithProvider(<BookListContainer />);
+    const { findByText } = renderWithProvider(<BookListPage />);
 
     const book1 = await findByText("Refactoring");
     const book2 = await findByText(
@@ -45,7 +45,7 @@ describe("BookListContainer", () => {
 
     mock.onGet("http://localhost:8080/books?q=").networkError();
 
-    const { findByText } = renderWithProvider(<BookListContainer />);
+    const { findByText } = renderWithProvider(<BookListPage />);
 
     const error = await findByText("Error...");
 
