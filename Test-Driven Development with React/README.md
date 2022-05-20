@@ -6,3 +6,10 @@ Projects from the book [Test-Driven Development with React](https://www.amazon.c
 
 This project uses `Node 16.14.2`.
 
+## References
+
+- [React Testing Library best practices](https://www.benmvp.com/blog/react-testing-library-best-practices/)
+- [10 Tips for Better Redux Architecture](https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44)
+- [Observer Synchronization](https://martinfowler.com/eaaDev/MediatedSynchronization.html)
+- [React/Redux Tips: Better Way to Handle Loading Flags in Your Reducers](https://medium.com/stashaway-engineering/react-redux-tips-better-way-to-handle-loading-flags-in-your-reducers-afda42a804c6)
+
