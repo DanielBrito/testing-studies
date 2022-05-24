@@ -13,3 +13,12 @@ This project uses `Node 16.14.2`.
 - [Observer Synchronization](https://martinfowler.com/eaaDev/MediatedSynchronization.html)
 - [React/Redux Tips: Better Way to Handle Loading Flags in Your Reducers](https://medium.com/stashaway-engineering/react-redux-tips-better-way-to-handle-loading-flags-in-your-reducers-afda42a804c6)
 
+## Preview
+
+### Bookish
+
+![Bookish](./bookish.gif)
+
+### Tests
+
+![Cypress](./tests.gif)
