@@ -65,7 +65,7 @@ export const performSearch = (term) => {
 export const composeReview = (name, content) => {
   cy.get("[data-cy=name-input]").type(name);
   cy.get("[data-cy=content-input]").type(content);
-  cy.get("[data-cy=submit-button]").click();
+  cy.get("[data-cy=review-button]").click();
 };
 
 export const checkReview = () => {

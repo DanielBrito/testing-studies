@@ -40,7 +40,9 @@ export const Review = ({ review }) => {
           <Grid container>
             <Grid item xs={12}>
               {!editing ? (
-                <Typography>{review.content}</Typography>
+                <Typography data-testid="review-content">
+                  {review.content}
+                </Typography>
               ) : (
                 <TextField
                   fullWidth
@@ -52,6 +54,7 @@ export const Review = ({ review }) => {
                   maxRows={4}
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
+                  inputProps={{ "data-testid": "review-input" }}
                 />
               )}
             </Grid>
@@ -61,6 +64,7 @@ export const Review = ({ review }) => {
                 color="primary"
                 name="submit"
                 onClick={clickHandler}
+                data-testid="review-button"
               >
                 {!editing ? "Edit" : "Submit"}
               </Button>

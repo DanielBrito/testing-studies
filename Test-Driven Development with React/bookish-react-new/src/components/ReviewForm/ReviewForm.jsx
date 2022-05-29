@@ -58,7 +58,7 @@ export const ReviewForm = ({ bookId }) => {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             data-cy="content-input"
-            data-testid="content-input"
+            inputProps={{ "data-testid": "review-input" }}
           />
         </Grid>
 
@@ -68,8 +68,8 @@ export const ReviewForm = ({ bookId }) => {
             color="primary"
             name="submit"
             onClick={onSubmit}
-            data-cy="submit-button"
-            data-testid="submit-button"
+            data-cy="review-button"
+            data-testid="review-button"
           >
             Submit
           </Button>

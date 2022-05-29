@@ -81,7 +81,7 @@ describe("BookDetail", () => {
     const form = screen.getByTestId("form");
     const nameInput = screen.getByTestId("name-input");
     const contentTextArea = screen.getByTestId("content-input");
-    const submitButton = screen.getByTestId("submit-button");
+    const submitButton = screen.getByTestId("review-button");
 
     expect(form).toBeInTheDocument();
     expect(nameInput).toBeInTheDocument();
