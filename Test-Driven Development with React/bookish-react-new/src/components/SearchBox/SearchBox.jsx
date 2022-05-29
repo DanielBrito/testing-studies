@@ -15,10 +15,11 @@ export const SearchBox = ({ term, onSearch }) => {
       fullWidth
       label="Search"
       value={term}
-      data-cy="search-input"
       onChange={protect}
       margin="normal"
       variant="outlined"
+      data-cy="search-input"
+      inputProps={{ "data-testid": "search-input" }}
     />
   );
 };
