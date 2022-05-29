@@ -57,8 +57,8 @@ export const BookList = ({ loading, error, books }) => {
                     variant="h5"
                     component="h2"
                     className={classes.name}
-                    data-testid="book-title"
                     data-cy="book-title"
+                    data-testid="book-title"
                   >
                     {book.name}
                   </Typography>

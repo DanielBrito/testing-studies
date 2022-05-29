@@ -14,6 +14,7 @@ These experiments cover different tools and concepts related to testing from my 
 - [Testing Strategies in a Microservice Architecture](https://martinfowler.com/articles/microservice-testing/) (Toby Clemson)
 - [The Practical Test Pyramid](https://martinfowler.com/articles/microservice-testing/) (Ham Vocke)
 - [Cypress Best Practices](https://docs.cypress.io/guides/references/best-practices)
+- [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) (Kent Dodds)
 
 ## :toolbox: Tools
 
