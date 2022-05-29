@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container/Container";
 
-function App() {
+import Routes from "./Routes";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      <Typography variant="h2" component="h2" data-test="heading">
+        Bookish
+      </Typography>
+      <Routes />
+    </Container>
   );
-}
+};
 
 export default App;
