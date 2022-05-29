@@ -35,11 +35,11 @@ export const BookList = ({ loading, error, books }) => {
   const classes = useStyles();
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p data-testid="loading-status">Loading...</p>;
   }
 
   if (error) {
-    return <p>Error...</p>;
+    return <p data-testid="error-status">Error...</p>;
   }
 
   const sortedBooks = [...books].sort((a, b) => a.id - b.id);
