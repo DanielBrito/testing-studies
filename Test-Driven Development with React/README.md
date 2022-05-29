@@ -4,7 +4,8 @@ Projects from the book [Test-Driven Development with React](https://www.amazon.c
 
 ## Notes
 
-This project uses `Node 16.14.2`.
+- This project uses `Node 16.14.2`.
+- `bookish-react` has old dependencies and `bookish-react-new` has updated dependencies.
 
 ## References
 
