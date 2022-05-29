@@ -15,7 +15,7 @@ export const SearchBox = ({ term, onSearch }) => {
       fullWidth
       label="Search"
       value={term}
-      data-test="search"
+      data-cy="search-input"
       onChange={protect}
       margin="normal"
       variant="outlined"

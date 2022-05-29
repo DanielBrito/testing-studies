@@ -36,6 +36,7 @@ export const ReviewForm = ({ bookId }) => {
             variant="outlined"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            data-cy="name-input"
           />
         </Grid>
 
@@ -47,9 +48,10 @@ export const ReviewForm = ({ bookId }) => {
             margin="normal"
             variant="outlined"
             multiline
-            rowsMax="4"
+            maxRows={4}
             value={content}
             onChange={(e) => setContent(e.target.value)}
+            data-cy="content-input"
           />
         </Grid>
 
@@ -59,6 +61,7 @@ export const ReviewForm = ({ bookId }) => {
             color="primary"
             name="submit"
             onClick={onSubmit}
+            data-cy="submit-button"
           >
             Submit
           </Button>

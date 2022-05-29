@@ -2,8 +2,9 @@ import axios from "axios";
 import * as types from "../types";
 
 export const fetchBooks = (term) => {
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch({ type: types.FETCH_BOOKS_PENDING });
+
     return axios
       .get(`http://localhost:8080/books?q=${term || ""}`)
       .then((res) => {
@@ -19,8 +20,9 @@ export const fetchBooks = (term) => {
 };
 
 export const fetchABook = (id) => {
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch({ type: types.FETCH_BOOK_PENDING });
+
     return axios
       .get(`http://localhost:8080/books/${id}`)
       .then((res) => {
@@ -40,8 +42,9 @@ export const saveReview = (id, review) => {
     headers: { "Content-Type": "application/json" },
   };
 
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch({ type: types.SAVE_BOOK_REVIEW_PENDING });
+
     return axios
       .post(
         `http://localhost:8080/books/${id}/reviews`,
@@ -66,8 +69,9 @@ export const saveBook = (book) => {
     headers: { "Content-Type": "application/json" },
   };
 
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch({ type: types.SAVE_BOOK_PENDING });
+
     return axios
       .post(`http://localhost:8080/books`, JSON.stringify(book), config)
       .then((res) => {
@@ -87,8 +91,9 @@ export const updateReview = (id, review) => {
     headers: { "Content-Type": "application/json" },
   };
 
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch({ type: types.SAVE_BOOK_REVIEW_PENDING });
+
     return axios
       .put(
         `http://localhost:8080/reviews/${id}`,

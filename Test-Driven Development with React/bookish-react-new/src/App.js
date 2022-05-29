@@ -7,7 +7,7 @@ import Routes from "./Routes";
 const App = () => {
   return (
     <Container maxWidth="sm">
-      <Typography variant="h2" component="h2" data-test="heading">
+      <Typography variant="h2" component="h2" data-cy="heading">
         Bookish
       </Typography>
       <Routes />

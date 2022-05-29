@@ -3,9 +3,9 @@ import Button from "@material-ui/core/Button/Button";
 import TextField from "@material-ui/core/TextField/TextField";
 import { useDispatch } from "react-redux";
 import Typography from "@material-ui/core/Typography/Typography";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails/ExpansionPanelDetails";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary/ExpansionPanelSummary";
-import ExpansionPanel from "@material-ui/core/ExpansionPanel/ExpansionPanel";
+import AccordionDetails from "@material-ui/core/AccordionDetails/AccordionDetails";
+import AccordionSummary from "@material-ui/core/AccordionSummary/AccordionSummary";
+import Accordion from "@material-ui/core/Accordion/Accordion";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Grid from "@material-ui/core/Grid/Grid";
 
@@ -27,20 +27,20 @@ export const Review = ({ review }) => {
 
   return (
     <div className="review">
-      <ExpansionPanel>
-        <ExpansionPanelSummary
+      <Accordion>
+        <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className="name">{review.name}</Typography>
-          <Typography className="date">{review.date}</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
+          <Typography>{review.name}</Typography>
+          <Typography>{review.date}</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
           <Grid container>
             <Grid item xs={12}>
               {!editing ? (
-                <Typography className="content">{review.content}</Typography>
+                <Typography>{review.content}</Typography>
               ) : (
                 <TextField
                   fullWidth
@@ -49,7 +49,7 @@ export const Review = ({ review }) => {
                   margin="normal"
                   variant="outlined"
                   multiline
-                  rowsMax="4"
+                  maxRows={4}
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
                 />
@@ -66,8 +66,8 @@ export const Review = ({ review }) => {
               </Button>
             </Grid>
           </Grid>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+        </AccordionDetails>
+      </Accordion>
     </div>
   );
 };

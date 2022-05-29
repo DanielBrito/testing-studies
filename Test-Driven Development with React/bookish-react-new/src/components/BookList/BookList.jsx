@@ -42,13 +42,13 @@ export const BookList = ({ loading, error, books }) => {
     return <p>Error...</p>;
   }
 
-  const sortedBooks = books.sort((a, b) => a.id - b.id);
+  const sortedBooks = [...books].sort((a, b) => a.id - b.id);
 
   return (
-    <div data-test="book-list" className={classes.root}>
+    <div data-cy="book-list" className={classes.root}>
       <Grid container spacing={3}>
         {sortedBooks.map((book) => (
-          <Grid item key={book.id} className="book-item">
+          <Grid item key={book.id} data-cy="book-item">
             <Card>
               <CardActionArea>
                 <CardContent>
@@ -58,6 +58,7 @@ export const BookList = ({ loading, error, books }) => {
                     component="h2"
                     className={classes.name}
                     data-testid="book-title"
+                    data-cy="book-title"
                   >
                     {book.name}
                   </Typography>
