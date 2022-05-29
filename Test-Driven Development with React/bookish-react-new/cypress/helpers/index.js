@@ -69,5 +69,5 @@ export const composeReview = (name, content) => {
 };
 
 export const checkReview = () => {
-  cy.get("[data-cy=reviews-container] .review").should("have.length", 1);
+  cy.get("[data-cy=reviews-container]").should("have.length", 1);
 };

@@ -1,32 +1,4 @@
 {
-  "books": [
-    {
-      "name": "Refactoring",
-      "id": 1,
-      "description": "Martin Fowler's Refactoring defined core ideas and techniques that hundreds of thousands of developers have used to improve their software."
-    },
-    {
-      "name": "Domain-driven design",
-      "id": 2,
-      "description": "Explains how to incorporate effective domain modeling into the software development process."
-    },
-    {
-      "name": "Building microservices",
-      "id": 3,
-      "description": "Author Sam Newman provides you with a firm grounding in the concepts while diving into current solutions for modeling, integrating, testing, deploying, and monitoring your own autonomous services."
-    },
-    {
-      "name": "Acceptance TDD with React",
-      "id": 4,
-      "description": "This book describes how to apply Acceptance Test Driven Development when developing a Web Application named Bookish with React, Redux, and other tools in React ecosystem."
-    }
-  ],
-  "reviews": [
-    {
-      "bookId": 1,
-      "name": "Daniel",
-      "content": "Awesome book!",
-      "id": 1
-    }
-  ]
+  "books": [],
+  "reviews": []
 }
