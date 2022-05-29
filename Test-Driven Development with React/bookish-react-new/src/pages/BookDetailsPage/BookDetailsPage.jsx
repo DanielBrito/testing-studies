@@ -14,7 +14,7 @@ export const BookDetailsPage = () => {
     dispatch(actions.fetchABook(id));
   }, [dispatch, id]);
 
-  const book = useSelector((state) => state.detail);
+  const book = useSelector((state) => state.details);
 
   return <BookDetail book={book} />;
 };

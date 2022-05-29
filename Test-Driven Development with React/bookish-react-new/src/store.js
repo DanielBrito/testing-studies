@@ -5,14 +5,12 @@ import thunk from "redux-thunk";
 
 import { createBrowserHistory } from "history";
 
-import books from "./redux/reducers/books";
-import detail from "./redux/reducers/detail";
-import errors from "./redux/reducers/errors";
+import { books, details, errors } from "./redux/reducers";
 
 const rootReducer = combineReducers({
   routing: routerReducer,
   books,
-  detail,
+  details,
   errors,
 });
 

@@ -1,4 +1,4 @@
-export default (state = {}, action) => {
+export const errors = (state = {}, action) => {
   const { type, payload } = action;
   const matches = /(.*)_(PENDING|FAILED)/.exec(type);
 

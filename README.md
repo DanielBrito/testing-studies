@@ -7,7 +7,7 @@ These experiments cover different tools and concepts related to testing from my 
 - Test-Driven Development
 - Unit Tests
 - Integration Tests
-- E2E Tests
+- Ent-To-End Tests
 
 ## 📑 Resources
 
