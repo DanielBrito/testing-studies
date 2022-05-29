@@ -1,0 +1,91 @@
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
+import "@testing-library/jest-dom/extend-expect";
+
+import { BookDetail } from "./BookDetail";
+
+import store from "../../store";
+
+const renderWithProvider = (component) => {
+  return { ...render(<Provider store={store}>{component}</Provider>) };
+};
+
+describe("BookDetail", () => {
+  it("renders title", () => {
+    const props = {
+      book: {
+        name: "Refactoring",
+      },
+    };
+
+    renderWithProvider(<BookDetail {...props} />);
+
+    const title = screen.getByTestId("book-title");
+
+    expect(title.innerHTML).toEqual(props.book.name);
+  });
+
+  it("renders description", () => {
+    const props = {
+      book: {
+        name: "Refactoring",
+        description:
+          "Martin Fowler's Refactoring defined core ideas and techniques that hundreds of thousands of developers have used to improve their software.",
+      },
+    };
+
+    renderWithProvider(<BookDetail {...props} />);
+
+    const title = screen.getByTestId("book-description");
+
+    expect(title.innerHTML).toEqual(props.book.description);
+  });
+
+  it("renders reviews", () => {
+    const props = {
+      book: {
+        name: "Refactoring",
+        description:
+          "Martin Fowler's Refactoring defined core ideas and techniques that hundreds of thousands of developers have used to improve their software.",
+        reviews: [
+          {
+            name: "Juntao",
+            date: "2018/06/21",
+            content: "Excellent work, really impressive on the efforts you put",
+          },
+        ],
+      },
+    };
+
+    renderWithProvider(<BookDetail {...props} />);
+
+    const reviews = screen.getAllByTestId("review");
+    const reviewer = screen.getByTestId("review-name").innerHTML;
+
+    expect(reviews.length).toBe(1);
+    expect(reviewer).toEqual("Juntao");
+  });
+
+  it("renders review form", () => {
+    const props = {
+      book: {
+        name: "Refactoring",
+        description:
+          "Martin Fowler's Refactoring defined core ideas and techniques that hundreds of thousands of developers have used to improve their software.",
+      },
+    };
+
+    renderWithProvider(<BookDetail {...props} />);
+
+    const form = screen.getByTestId("form");
+    const nameInput = screen.getByTestId("name-input");
+    const contentTextArea = screen.getByTestId("content-input");
+    const submitButton = screen.getByTestId("submit-button");
+
+    expect(form).toBeInTheDocument();
+    expect(nameInput).toBeInTheDocument();
+    expect(contentTextArea).toBeInTheDocument();
+    expect(submitButton).toBeInTheDocument();
+  });
+});

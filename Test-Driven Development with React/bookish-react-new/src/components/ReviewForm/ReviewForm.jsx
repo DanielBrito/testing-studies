@@ -25,7 +25,12 @@ export const ReviewForm = ({ bookId }) => {
   };
 
   return (
-    <form noValidate autoComplete="off" className={classes.root}>
+    <form
+      noValidate
+      autoComplete="off"
+      className={classes.root}
+      data-testid="form"
+    >
       <Grid container>
         <Grid item xs={12}>
           <TextField
@@ -37,6 +42,7 @@ export const ReviewForm = ({ bookId }) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             data-cy="name-input"
+            data-testid="name-input"
           />
         </Grid>
 
@@ -52,6 +58,7 @@ export const ReviewForm = ({ bookId }) => {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             data-cy="content-input"
+            data-testid="content-input"
           />
         </Grid>
 
@@ -62,6 +69,7 @@ export const ReviewForm = ({ bookId }) => {
             name="submit"
             onClick={onSubmit}
             data-cy="submit-button"
+            data-testid="submit-button"
           >
             Submit
           </Button>

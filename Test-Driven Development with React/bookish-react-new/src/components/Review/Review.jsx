@@ -26,15 +26,15 @@ export const Review = ({ review }) => {
   };
 
   return (
-    <div className="review">
+    <div data-testid="review">
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>{review.name}</Typography>
-          <Typography>{review.date}</Typography>
+          <Typography data-testid="review-name">{review.name}</Typography>
+          <Typography data-testid="review-date">{review.date}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Grid container>
