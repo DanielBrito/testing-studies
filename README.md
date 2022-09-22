@@ -9,7 +9,7 @@ These experiments cover different tools and concepts related to testing from my 
 - Integration Tests
 - Ent-To-End Tests
 
-## Projects
+## :rocket: Projects
 
 - [Polyglot Bank](https://github.com/DanielBrito/tdd-project-node)
 
