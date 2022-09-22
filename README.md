@@ -9,6 +9,10 @@ These experiments cover different tools and concepts related to testing from my 
 - Integration Tests
 - Ent-To-End Tests
 
+## Projects
+
+- [Polyglot Bank](https://github.com/DanielBrito/tdd-project-node)
+
 ## 📑 Resources
 
 - [Testing Strategies in a Microservice Architecture](https://martinfowler.com/articles/microservice-testing/) (Toby Clemson)
