@@ -18,6 +18,7 @@ These experiments cover different tools and concepts related to testing from my 
 - [Testing Strategies in a Microservice Architecture](https://martinfowler.com/articles/microservice-testing/) (Toby Clemson)
 - [The Practical Test Pyramid](https://martinfowler.com/articles/microservice-testing/) (Ham Vocke)
 - [Test-driven development as a defect-reduction practice](https://collaboration.csc.ncsu.edu/laurie/Papers/williamsltestDrivenDevelopment.pdf) (Laurie Williams et al.)
+- [Mutation Testing Advances: An Analysis and Survey](Articles/mutation_testing_advances-an_analysis_and_survey-papadakis_et_al.pdf) (Mika Papadakis et al.)
 
 ## :toolbox: Tools
 
