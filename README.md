@@ -19,6 +19,7 @@ These experiments cover different tools and concepts related to testing from my 
 - [The Practical Test Pyramid](https://martinfowler.com/articles/microservice-testing/) (Ham Vocke)
 - [Test-driven development as a defect-reduction practice](https://collaboration.csc.ncsu.edu/laurie/Papers/williamsltestDrivenDevelopment.pdf) (Laurie Williams et al.)
 - [Mutation Testing Advances: An Analysis and Survey](Articles/mutation_testing_advances-an_analysis_and_survey-papadakis_et_al.pdf) (Mike Papadakis et al.)
+- [An Analysis and Survey of the Development of Mutation Testing](Articles/an_analysis_and_survey_of_the_development_of_mutation_testing-jia_et_al.pdf) (Jia et al.)
 
 ## :toolbox: Tools
 
